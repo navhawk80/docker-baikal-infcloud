@@ -8,6 +8,7 @@ build:
 	docker build \
 			--build-arg TIMEZONE=$(timezone) \
 			--tag "$(image):$(tag)" \
+			--tag "$(image):latest" \
 			$(args) .
 
 export:
