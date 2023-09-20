@@ -3,7 +3,7 @@
 - [lighttpd](https://www.lighttpd.net/)
 - php7 + sqlite3 and mysql support
 - [baikal](https://github.com/sabre-io/Baikal) 0.9.3
-- [infcloud](https://www.inf-it.com/open-source/clients/infcloud/) 0.1.13
+- [infcloud](https://www.inf-it.com/open-source/clients/infcloud/) 0.13.1
 - [Alpine Linux](https://mirrordocker.com/_/alpine) 3.15
 - targets NAS
 
