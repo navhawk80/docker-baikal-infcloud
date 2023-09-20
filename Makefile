@@ -19,5 +19,5 @@ run:
 			--publish 8800:8800 \
 			--volume "$$(pwd)/baikal:/var/www/baikal/Specific" \
 			--volume "$$(pwd)/baikal:/var/www/baikal/config" \
-			--volume "$$(pwd)/infcloud/config.js:/var/www/infcloud/config.js" \
+			--volume "$$(pwd)/baikal/infcloud.config.js:/var/www/infcloud/config.js" \
 			$(args) $(image)
