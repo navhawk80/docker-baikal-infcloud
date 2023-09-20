@@ -1,14 +1,13 @@
 default: build
 
 image = alpine-infcloud-baikal
-tag = 3.9-0.13.1-0.5.2
-timezone = Europe/Berlin
+tag = 3.15-0.13.1-0.9.3
+timezone = Europe/Moscow
 
 build:
 	docker build \
 			--build-arg TIMEZONE=$(timezone) \
 			--tag "$(image):$(tag)" \
-			--tag "$(image):latest" \
 			$(args) .
 
 export:
@@ -19,4 +18,5 @@ run:
 	docker run \
 			--publish 8800:8800 \
 			--volume "$$(pwd)/baikal:/var/www/baikal/Specific" \
+			--volume "$$(pwd)/baikal:/var/www/baikal/config" \
 			$(args) $(image)
