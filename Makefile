@@ -17,7 +17,8 @@ export:
 run:
 	docker run \
 			--publish 8800:8800 \
-			--volume "$$(pwd)/baikal:/var/www/baikal/Specific" \
-			--volume "$$(pwd)/baikal:/var/www/baikal/config" \
-			--volume "$$(pwd)/baikal/infcloud.config.js:/var/www/infcloud/config.js" \
+			--volume "$$(pwd)/baikal/data:/var/www/baikal/Specific" \
+			--volume "$$(pwd)/baikal/config:/var/www/baikal/config" \
+			--volume "$$(pwd)/baikal/lighttpd.conf:/etc/lighttpd/lighttpd.conf:ro" \
+			--volume "$$(pwd)/baikal/infcloud.config.js:/var/www/infcloud/config.js:ro" \
 			$(args) $(image)
